@@ -42,7 +42,8 @@ const routes = [
   },
 ]
 
-export default new VueRouter({
+const router = new VueRouter({
+  mode: 'history',
   scrollBehavior: (to, from, savedPosition) => {
     let scrollTo = 0
 
@@ -56,3 +57,5 @@ export default new VueRouter({
   },
   routes
 })
+
+export default router
