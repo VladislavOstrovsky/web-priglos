@@ -131,7 +131,7 @@ export default {
       links: [
         { url: '/lovestory', text: 'LoveStory' },
         { url: '/photos', text: 'Photos' },
-        { url: '/when-where-how', text: 'When/Where/How' },
+        { url: '/location', text: 'When/Where/How' },
         { url: '/gifts', text: 'Gifts' },
       ],
     }
