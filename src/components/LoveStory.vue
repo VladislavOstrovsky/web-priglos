@@ -143,7 +143,7 @@ export default {
   },
   methods: {
     goHome () {
-      window.location.href = `/#/?q=${this.$route.query.q}`
+      window.location.href = `/?q=${this.$route.query.q}`
     },
     async openDialog (id, title) {
       this.imageSrc = id

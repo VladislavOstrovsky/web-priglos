@@ -29,7 +29,7 @@ const routes = [
     props: (route) => ({ query: route.query.q })
   },
   {
-    path: '/when-where-how',
+    path: '/location',
     name: 'when-where-how',
     component: WhenWhereHow,
     props: (route) => ({ query: route.query.q })
