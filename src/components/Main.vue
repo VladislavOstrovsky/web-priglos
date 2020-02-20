@@ -6,35 +6,21 @@
       class="main"
       style="height: calc(100vh - 60px)"
     >
-      <v-flex xs12 class="main-logo">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my"
-          contain
-        >
-        </v-img>
-      </v-flex>
+      <logo />
 
       <v-flex xs12 mb-4 class="animated zoomIn">
         <h1 class="wedding-title mb-4">
           Welcome to Wedding
         </h1>
+
         <div class="wedding-names">
-          Dear
           <span v-for="name in routeNames" :key=name.id>
             {{name.text}}
           </span>
         </div>
-        <div class="wedding-links">
-          <router-link 
-            v-for="link in links"
-            :key="link.text"
-            class="link"
-            :to="{ path: link.url, query: $route.query }"
-            >
-            {{ link.text }}
-          </router-link>
-        </div>
+
+        <web-footer />
+        
       </v-flex>
     </v-layout>
     
@@ -45,14 +31,14 @@
           contain
         ></v-img>
       </div>
-      <div class="avatar-info desktop teal lighten-5">
+      <div class="avatar-info desktop groom">
         Жених. Улыбчивый программист. Родом из Алтайского края, с.Каяушка. Люблю футбол, баскетбол и турники)
         <div class="avatar-info__icon">
           <i v-for="item in socSetVlad"
-              :key=item.value
-              :title=item.value
-              :class=item.className
-              @click=openLink(item.url)></i>
+             :key=item.value
+             :title=item.value
+             :class=item.value
+             @click=openLink(item.url)></i>
         </div>
       </div>
     </div>
@@ -64,14 +50,14 @@
           contain
         ></v-img>
       </div>
-      <div class="avatar-info desktop teal lighten-5">
+      <div class="avatar-info desktop bride">
         Невеста. Красотка. Родом из Алтайского края, с.Первомайское. Люблю танцы, историю, чтение и вкусно покушать)
         <div class="avatar-info__icon">
           <i v-for="item in socSetKate"
-              :key=item.value
-              :title=item.value
-              :class=item.className
-              @click=openLink(item.url)></i>
+             :key=item.value
+             :title=item.value
+             :class=item.value
+             @click=openLink(item.url)></i>
         </div>
       </div>
     </div>
@@ -82,7 +68,7 @@
       >
         <v-card>
           <v-card-title
-            class="headline grey lighten-4"
+            class="grey lighten-4"
             primary-title
           >
           {{ man ? 'Жених' : 'Невеста' }}
@@ -90,12 +76,13 @@
           </v-card-title>
 
           <div class="avatar-info dialog white">
-            {{ man ? 'Жених. Улыбчивый программист. Родом из Алтайского края, с.Каяушка. Люблю футбол, баскетбол и турники)' : 'Невеста. Красотка. Родом из Алтайского края, с.Первомайское. Люблю танцы, историю, чтение и вкусно покушать)' }}
+            {{ man ? 'Жених. Улыбчивый программист. Родом из Алтайского края, с.Родино. Люблю футбол, баскетбол и турники)' : 'Невеста. Красотка. Родом из Алтайского края, с.Первомайское. Люблю танцы, историю, чтение и вкусно покушать)' }}
             <div class="avatar-info__icon">
               <i v-for="item in socSetVlad"
-                  :key=item.value
-                  :class=item.className
-                  @click=openLink(item.url)></i>
+                 :key=item.value
+                 :class=item.value
+                 @click=openLink(item.url)>
+              </i>
             </div>
           </div>
         </v-card>
@@ -111,27 +98,22 @@ export default {
       dialog: false,
       man: false,
       socSetVlad: [
-        { value: 'instagram', url: 'https://www.instagram.com/ostrovsky_vlad/', className: 'fab fa-instagram' },
-        { value: 'vkontakte', url: 'https://vk.com/ostrovsky_vlad', className: 'fab fa-vk' },
+        { value: 'instagram', url: 'https://www.instagram.com/ostrovsky_vlad/' },
+        { value: 'vkontakte', url: 'https://vk.com/ostrovsky_vlad' },
       ],
       socSetKate: [
-        { value: 'instagram', url: 'https://www.instagram.com/panteleevakatya/', className: 'fab fa-instagram' },
-        { value: 'vkontakte', url: 'https://vk.com/id89905678', className: 'fab fa-vk' },
-      ],
-      links: [
-        { url: '/lovestory', text: 'LoveStory' },
-        { url: '/photos', text: 'Photos' },
-        { url: '/location', text: 'When/Where/How' },
-        { url: '/gifts', text: 'Gifts' },
+        { value: 'instagram', url: 'https://www.instagram.com/panteleevakatya/' },
+        { value: 'vkontakte', url: 'https://vk.com/id89905678' },
       ],
       names: [
-        { id: 1, key: 89628069923, text: 'Vladisalav and Ekaterina' },
-        { id: 2, key: 89628069920, text: 'Daria and Alexandra' },
-        { id: 3, key: 89095053732, text: 'Elena and Yuriy' },
-        { id: 4, key: 89628069924, text: 'Julia and Alexey' },
-        { id: 5, key: 89628069925, text: 'Anton and Maria' },
-        { id: 6, key: 89628069926, text: 'Anton and Sonya' },
-        { id: 7, key: 89132509895, text: 'Dmitriy and Oksana' },
+        { id: 1, key: 9628069923, text: 'Дорогие Владислав и Екатерина' },
+        { id: 2, key: 9628069920, text: 'Дорогие Дарья и Александра' },
+        { id: 3, key: 9095053732, text: 'Дорогие Елена и Юрий Островские' },
+        { id: 4, key: 9628069924, text: 'Дорогие Юлия и Алексей Пантелеевы' },
+        { id: 5, key: 9628069925, text: 'Дорогие Антон и Мария' },
+        { id: 6, key: 9628069926, text: 'Дорогие Антон и Соня' },
+        { id: 7, key: 9132509895, text: 'Дорогие Дмитрий и Оксана' },
+        { id: 8, key: 9132114313, text: 'Дорогой Никита' },
       ],
     }
   },

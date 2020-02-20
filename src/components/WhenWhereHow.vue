@@ -6,24 +6,15 @@
       style="height: calc(100vh - 24px)"
     >
      
-      <v-flex xs12 class="main-logo lovestory">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my lovestory"
-          contain
-          height="25vh"
-          @click="goHome"
-        >
-        </v-img>
-      </v-flex>
+      <logo class="lovestory" />
 
       <v-flex xs12 mb-4>
-        <h1 class="mb-3 wedding-title lovestory animated zoomIn">
+        <h1 class="mb-12 wedding-title lovestory animated zoomIn">
           Location
         </h1>
-        <v-flex xs12 mb-10 class="location">
+        <v-flex xs12 mb-10 class="location animated zoomIn">
           <v-img
-            :src="require('../assets/map.svg')"
+            :src="require('../assets/icons/map.svg')"
             class="map"
             contain
             height="25vh"
@@ -31,16 +22,7 @@
           </v-img>
         </v-flex>
 
-        <div class="wedding-links">
-          <router-link 
-            v-for="link in links"
-            :key="link.text"
-            class="link"
-            :to="{ path: link.url, query: $route.query }"
-            >
-            {{ link.text }}
-          </router-link>
-        </div>
+        <web-footer />
       </v-flex>
 
     </v-layout>
@@ -53,21 +35,14 @@ export default {
   name: 'WhenWhereHow',
   data () {
     return {
-      links: [
-        { url: '/lovestory', text: 'LoveStory' },
-        { url: '/photos', text: 'Photos' },
-        { url: '/location', text: 'When/Where/How' },
-        { url: '/gifts', text: 'Gifts' },
-      ],
+      
     }
   },
   computed: {
 
   },
   methods: {
-    goHome () {
-      window.location.href = `/?q=${this.$route.query.q}`
-    }
+  
   },
 };
 </script>

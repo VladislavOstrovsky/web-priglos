@@ -6,41 +6,26 @@
       style="height: calc(100vh - 24px)"
     >
      
-      <v-flex xs12 class="main-logo lovestory">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my lovestory"
-          contain
-          height="25vh"
-          @click="goHome"
-        >
-        </v-img>
-      </v-flex>
+      <logo class="lovestory" />
 
-      <v-flex xs12 mb-4>
-        <h1 class="mb-3 wedding-title lovestory animated zoomIn">
+      <v-flex xs12>
+        <h1 class="mb-12 wedding-title lovestory animated zoomIn">
           Gifts
         </h1>
-        <v-flex xs12 mb-10 class="location">
+        <v-flex xs12 class="flex-column location animated zoomIn">
           <v-img
-            :src="require('../assets/gift.svg')"
+            :src="require('../assets/icons/gift.svg')"
             class="map"
             contain
-            height="25vh"
+            height="15vh"
           >
           </v-img>
+          <p class="gifts-title">
+            Не ломайте голову над подарком, мы будем очень рады вашему вкладу в бюджет молодой семьи
+          </p>
         </v-flex>
 
-        <div class="wedding-links">
-          <router-link 
-            v-for="link in links"
-            :key="link.text"
-            class="link"
-            :to="{ path: link.url, query: $route.query }"
-            >
-            {{ link.text }}
-          </router-link>
-        </div>
+        <web-footer />
       </v-flex>
 
     </v-layout>
@@ -53,21 +38,25 @@ export default {
   name: 'Gifts',
   data () {
     return {
-      links: [
-        { url: '/lovestory', text: 'LoveStory' },
-        { url: '/photos', text: 'Photos' },
-        { url: '/location', text: 'When/Where/How' },
-        { url: '/gifts', text: 'Gifts' },
-      ],
+
     }
   },
   computed: {
 
   },
   methods: {
-    goHome () {
-      window.location.href = `/?q=${this.$route.query.q}`
-    }
   },
 };
 </script>
+
+<style lang="scss">
+  .location {
+    margin-bottom: 20px;
+  }
+
+  .gifts-title {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+</style>

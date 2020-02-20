@@ -6,19 +6,10 @@
       style="height: calc(100vh - 24px)"
     >
      
-      <v-flex xs12 class="main-logo lovestory">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my lovestory"
-          contain
-          height="25vh"
-          @click="goHome"
-        >
-        </v-img>
-      </v-flex>
+      <logo class="lovestory" />
 
       <v-flex md12 mb-12>
-        <h1 class="mb-3 wedding-title lovestory animated zoomIn">
+        <h1 class="mb-12 wedding-title lovestory animated zoomIn">
           Photos
         </h1>
         <v-flex class="mb-12">
@@ -26,16 +17,7 @@
         </v-flex>
       </v-flex>
 
-      <v-flex mb-12 class="wedding-links right">
-        <router-link 
-          v-for="link in links"
-          :key="link.text"
-          class="link"
-          :to="{ path: link.url, query: $route.query }"
-          >
-          {{ link.text }}
-        </router-link>
-      </v-flex>
+      <web-footer />
 
     </v-layout>
   </v-container>
@@ -120,21 +102,7 @@ export default {
           w: 600,
           h: 900,
         }
-      ],
-      links: [
-        { url: '/lovestory', text: 'LoveStory' },
-        { url: '/photos', text: 'Photos' },
-        { url: '/location', text: 'When/Where/How' },
-        { url: '/gifts', text: 'Gifts' },
-      ],
-    }
-  },
-  computed: {
-
-  },
-  methods: {
-    goHome () {
-      window.location.href = `/?q=${this.$route.query.q}`
+      ]
     }
   },
 };

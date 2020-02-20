@@ -6,19 +6,10 @@
       style="height: calc(100vh - 24px)"
     >
      
-      <v-flex xs12 class="main-logo lovestory">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my lovestory"
-          contain
-          height="25vh"
-          @click="goHome"
-        >
-        </v-img>
-      </v-flex>
+      <logo class="lovestory" />
 
       <v-flex xs12 mb-12>
-        <h1 class="wedding-title lovestory mb-3 animated zoomIn">
+        <h1 class="wedding-title lovestory mb-12 animated zoomIn">
           Love Story
         </h1>
         
@@ -36,7 +27,7 @@
             <span slot="opposite">
               {{ item.title }}
             </span>
-            <v-card class="elevation-3" color="teal lighten-5">
+            <v-card class="elevation-3" color="white">
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-text v-html="item.description"></v-card-text>
             </v-card>
@@ -45,16 +36,7 @@
         </v-timeline>
       </v-flex>
 
-      <v-flex mb-12 class="wedding-links right">
-        <router-link 
-          v-for="link in links"
-          :key="link.text"
-          class="link"
-          :to="{ path: link.url, query: $route.query }"
-          >
-          {{ link.text }}
-        </router-link>
-      </v-flex>
+      <web-footer />
 
       <v-dialog
         v-model="dialog"
@@ -63,7 +45,7 @@
       >
         <v-card>
           <v-card-title
-            class="headline grey lighten-4"
+            class="grey lighten-4"
             primary-title
           >
             {{ dialogTitle }}
@@ -82,7 +64,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'LoveStory',
   data () {
@@ -128,12 +109,6 @@ export default {
           description: 'Мы решили отправиться в Санкт-Петербург на Новый год'
         },
       ],
-      links: [
-        { url: '/lovestory', text: 'LoveStory' },
-        { url: '/photos', text: 'Photos' },
-        { url: '/location', text: 'When/Where/How' },
-        { url: '/gifts', text: 'Gifts' },
-      ],
     }
   },
   computed: {
@@ -142,9 +117,6 @@ export default {
     }
   },
   methods: {
-    goHome () {
-      window.location.href = `/?q=${this.$route.query.q}`
-    },
     async openDialog (id, title) {
       this.imageSrc = id
       this.dialogTitle = title
@@ -155,6 +127,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .theme--light.v-timeline {
   .v-timeline-item__dot {
     background: #ECD1D8;
@@ -162,8 +135,14 @@ export default {
 }
 
 .v-timeline {
-  font-family: 'Book Antiqua';
+  font-family: 'Amalfi';
   margin-bottom: 50px;
+
+  .v-timeline-item__opposite {
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+    letter-spacing: 1px !important;
+  }
 
   .v-timeline-item__body {
     @media only screen and (max-width: 600px) {

@@ -7,6 +7,10 @@
 <style lang="scss">
 @font-face {
   font-family: Amalfi;
+  src: url('assets/fonts/Amalfi-Regular.otf');
+}
+@font-face {
+  font-family: AmalfiCoast;
   src: url('assets/fonts/Amalfi-Coast.ttf');
 }
 @font-face {
@@ -68,7 +72,7 @@ body {
   }
 }
 #app {
-  font-family: 'Book Antiqua';
+  font-family: 'Amalfi';
   text-align: center;
   color: #2B2A29;
 }
@@ -81,49 +85,8 @@ body {
 }
 
 h1 {
-  font-family: 'ModernSans';
+  font-family: 'Amalfi';
   margin-bottom: 50px;
-}
-
-.main-logo {
-  align-self: center;
-  position: relative;
-
-  .v-image__image {
-    background-position: center bottom !important;
-  }
-
-  &.lovestory {
-    align-self: flex-start;
-  }
-
-  @media only screen and (max-width: 600px) {
-    align-self: flex-end;
-  }
-
-  .my {
-    position: relative;
-    margin: 0 auto;
-    width: 225px;
-    cursor: pointer;
-
-    @media only screen and (max-width: 600px) {
-      width: 130px;
-    }
-
-    &.lovestory {
-      margin: 0 0 0 auto;
-
-      @media only screen and (max-width: 600px) {
-        margin: 0 auto;
-      }
-    }
-
-    &:hover {
-      -webkit-animation: swing 1s;
-      animation: swing 1s;
-    }
-  }
 }
 
 .avatar {
@@ -136,8 +99,25 @@ h1 {
 
   .avatar-image {
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 10px 0 rgba(63, 84, 65, .5);
+    border-radius: 100%;
+    transition: all 0.3s;
+
+    &:hover {
+      animation: bounce 1s;
+    }
+
+    @media only screen and (max-width: 1400px) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      width: 150px;
+      height: 150px;
+    }
 
     @media only screen and (max-width: 600px) {
       width: 100px;
@@ -155,13 +135,56 @@ h1 {
 }
 
 .avatar-info {
-  font-family: 'GTWalsheimProRegular';
+  font-family: 'Amalfi';
   font-weight: 500;
-  padding: 15px;
+  padding: 20px;
+  font-size: 45px;
+  line-height: 1;
   text-align: left;
+  position: relative;
 
   &.desktop {
     border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(63, 84, 65, .5);
+    
+    &:hover {
+      &.groom {
+        &:after {
+          animation: jello 1s;
+        }
+      }
+
+      &.bride {
+        &:after {
+          animation: swing 1s;
+        }
+      }
+    }
+
+    &.groom {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: url('assets/icons/grow.svg') center no-repeat;
+      }
+    }
+
+    &.bride {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: url('assets/icons/bride.svg') center no-repeat;
+      }
+    }
   }
 
   @media only screen and (max-width: 600px) {
@@ -173,118 +196,100 @@ h1 {
   }
 
   &__icon {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-end;
-    font-size: 22px;
+
+    .vkontakte {
+      background: url('assets/icons/vk.svg') center no-repeat;
+    }
+
+    .instagram {
+      background: url('assets/icons/instagram.svg') center no-repeat;
+    }
 
     i {
       cursor: pointer;
       margin-left: 7px;
-    }
+      width: 20px;
+      height: 20px;
+      background-size: contain;
 
-    i:hover {
-      color: #3F5441;
+      &:hover {
+        animation: jello 1s;
+      }
     }
   }
 }
 
 .wedding-title {
-  font-family: 'CorreaScriptRegular';
-  font-size: 50px;
+  font-family: 'AmalfiCoast';
+  font-size: 40px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 20px;
+    font-size: 28px;
+  }
 
   &.lovestory {
     @media only screen and (max-width: 600px) {
-      font-size: 42px;
+      font-size: 24px;
     }
-  }
-
-  @media only screen and (max-width: 600px) {
-    font-size: 32px;
   }
 }
 
 .wedding-names {
   font-family: 'Amalfi';
-  font-size: 36px;
+  font-size: 120px;
   margin-bottom: 50px;
   line-height: 2;
+  letter-spacing: 2px;
+
+  @media only screen and (max-width: 1400px) {
+    font-size: 100px;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 75px;
+  }
 
   @media only screen and (max-width: 600px) {
-    font-size: 32px;
+    font-size: 48px;
   }
 
    @media only screen and (max-width: 320px) {
-    font-size: 28px;
+    font-size: 36px;
   }
-}
-
-.wedding-links {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  &.right {
-    justify-content: flex-end;
-  }
-
-  .link {
-    margin-left: 25px;
-
-    @media only screen and (max-width: 600px) {
-      margin-bottom: 100px;
-      font-size: 13px;
-      margin-left: 10px;
-    }
-
-    @media only screen and (max-width: 320px) {
-      font-size: 12px;
-      margin-bottom: 150px;
-      margin-left: 8px;
-    }
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  a {
-    color: #3F5441 !important;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .router-link-exact-active {
-    text-decoration: underline;
-  }
-}
-
-.theme--light.v-footer {
-  background-color: #fff !important;
-}
-
-.main-footer {
-  justify-content: center;
 }
 
 .v-dialog__container {
-    display: unset; 
+  display: unset; 
 }
 
 .v-card__title {
+  color: #3F5441;
+  font-weight: 500;
+  font-family: 'Amalfi';
+  font-size: 3rem !important;
+
   @media only screen and (max-width: 600px) {
-    font-size: 0.85rem !important;
+    padding: 10px !important;
     line-height: 1.5rem !important;
     word-break: break-word !important;
+    font-size: 2.5rem !important;
   }
 }
 
 .v-card__text {
   text-align: left;
+  font-size: 2.3rem !important;
+  color: #000;
+  letter-spacing: 1px !important;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem !important;
+    padding: 10px !important;
+  }
 }
 
 </style>
