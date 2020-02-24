@@ -3,15 +3,12 @@
     <v-layout
       text-center
       wrap
-      style="height: calc(100vh - 24px)"
     >
-     
       <logo class="lovestory" />
 
       <v-flex md12 mb-12>
-        <h1 class="mb-12 wedding-title lovestory animated zoomIn">
-          Photos
-        </h1>
+        <header-title text="Фото" />
+
         <v-flex class="mb-12">
           <vue-picture-swipe :items="items"></vue-picture-swipe>
         </v-flex>
@@ -24,7 +21,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Photos',
   data () {

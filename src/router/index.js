@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import LoveStory from '../components/LoveStory'
 import Photos from '../components/Photos'
-import WhenWhereHow from '../components/WhenWhereHow'
-import Gifts from '../components/Gifts'
+import Location from '../components/Location'
+import Tips from '../components/Tips'
 import goTo from 'vuetify/es5/services/goto'
 
 Vue.use(VueRouter)
@@ -30,14 +30,14 @@ const routes = [
   },
   {
     path: '/location',
-    name: 'when-where-how',
-    component: WhenWhereHow,
+    name: 'location',
+    component: Location,
     props: (route) => ({ query: route.query.q })
   },
   {
-    path: '/gifts',
-    name: 'gifts',
-    component: Gifts,
+    path: '/tips',
+    name: 'tips',
+    component: Tips,
     props: (route) => ({ query: route.query.q })
   },
 ]

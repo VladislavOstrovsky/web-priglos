@@ -3,20 +3,16 @@
     <v-layout
       text-center
       wrap
-      style="height: calc(100vh - 24px)"
     >
-     
       <logo class="lovestory" />
 
       <v-flex xs12 mb-12>
-        <h1 class="wedding-title lovestory mb-12 animated zoomIn">
-          Love Story
-        </h1>
+        <header-title text="Love Story" />
         
         <v-timeline>
           <v-timeline-item
             v-for="(item, index) in loveHistory"
-            :class="{'animated fadeInLeft': index%2!=0, 'animated fadeInRight': index%2==0 }"
+            :class="{'animated fadeInLeft': index %2 != 0, 'animated fadeInRight': index %2 == 0 }"
             :key="index"
           >
             <template v-slot:icon>

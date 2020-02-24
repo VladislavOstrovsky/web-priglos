@@ -20,7 +20,7 @@ export default {
         { url: '/lovestory', text: 'LoveStory' },
         { url: '/photos', text: 'Photos' },
         { url: '/location', text: 'Location' },
-        { url: '/gifts', text: 'Gifts' },
+        { url: '/tips', text: 'Tips' },
       ]
     }
   }
