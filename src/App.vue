@@ -111,8 +111,8 @@ h1 {
     }
 
     @media only screen and (max-width: 1400px) {
-      width: 200px;
-      height: 200px;
+      width: 170px;
+      height: 170px;
     }
 
     @media only screen and (max-width: 1100px) {
@@ -228,8 +228,13 @@ h1 {
   font-size: 40px;
 
   @media only screen and (max-width: 600px) {
-    margin-top: 20px;
     font-size: 28px;
+    margin: 40px 0;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 20px;
+    margin: 30px 0;
   }
 
   &.lovestory {
@@ -240,26 +245,26 @@ h1 {
 }
 
 .wedding-names {
-  font-family: 'Amalfi';
-  font-size: 120px;
+  font-family: 'BlacktearScript';
+  font-size: 80px;
   margin-bottom: 50px;
-  line-height: 2;
+  line-height: 1.3;
   letter-spacing: 2px;
 
   @media only screen and (max-width: 1400px) {
-    font-size: 100px;
+    font-size: 70px;
   }
 
   @media only screen and (max-width: 1100px) {
-    font-size: 75px;
+    font-size: 65px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 48px;
+    font-size: 36px;
   }
 
-   @media only screen and (max-width: 320px) {
-    font-size: 36px;
+  @media only screen and (max-width: 320px) {
+    font-size: 28px;
   }
 }
 
@@ -300,23 +305,36 @@ h1 {
 
   @media only screen and (max-width: 600px) {
     font-size: 2rem;
+    flex-direction: column;
   }
 
-  .v-responsive {
-    &.v-image {
+  &--icon {
+    width: 250px;
+  }
+
+  &--image {
+    font-family: 'BlacktearScript';
+
+    .v-image__image {
+      border-radius: 7px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+    }
+
+    &__title {
+      font-family: 'Amalfi';
+
       @media only screen and (max-width: 600px) {
-        display: none;
+        font-size: 3rem;
+        line-height: 1;
       }
     }
   }
 
-  &--icon {
-    flex: 1;
-  }
-
   &--content {
-    margin-left: 50px;
-    width: 30vw;
+    margin-left: 80px;
     font-family: 'BlacktearScript';
 
     @media only screen and (max-width: 600px) {
@@ -354,6 +372,10 @@ h1 {
   line-height: 1;
   font-weight: normal;
   font-family: 'BlacktearScript';
+
+  @media only screen and (max-width: 600px) {
+    font-size: 3rem;
+  }
 }
 
 .tips-content {
@@ -382,14 +404,14 @@ h1 {
     flex-wrap: wrap;
 
     &-item {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 100%;
       margin-left: 10px;
 
       @media only screen and (max-width: 600px) {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
       }
     }
   }

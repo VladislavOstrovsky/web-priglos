@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import LoveStory from '../components/LoveStory'
 import Photos from '../components/Photos'
 import Location from '../components/Location'
-import Tips from '../components/Tips'
+import Info from '../components/Info'
 import goTo from 'vuetify/es5/services/goto'
 
 Vue.use(VueRouter)
@@ -35,9 +35,9 @@ const routes = [
     props: (route) => ({ query: route.query.q })
   },
   {
-    path: '/tips',
-    name: 'tips',
-    component: Tips,
+    path: '/info',
+    name: 'info',
+    component: Info,
     props: (route) => ({ query: route.query.q })
   },
 ]

@@ -10,12 +10,30 @@
         <header-title text="Местоположение" />
         
         <v-flex xs12 mb-10 class="d-inline-flex location animated zoomIn">
-          <v-img
-            :src="require('../assets/icons/map.svg')"
-            class="location--icon"
-            contain
-          >
-          </v-img>
+          <div class="location--image">
+            <v-img
+              v-if="show === 1"
+              :src="require('../assets/location-dvorec.png')"
+              class="location--icon"
+              cover
+            >
+            </v-img>
+
+            <v-img
+              v-else
+              :src="require('../assets/location-serebro.jpg')"
+              class="location--icon"
+              cover
+            >
+            </v-img>
+            
+            <div v-if="show === 2">
+              <div class="location--image__title">
+                Белый шатёр
+              </div>
+              Раздольная, 22
+            </div>
+          </div>
 
           <div class="location--content">
             <div v-if="show === 1">
@@ -30,13 +48,14 @@
             </div>
             <div v-else>
               <div class="location--content__title">
+                Сбор гостей
+              </div>
+              16 часов<br />
+              <div class="location--content__title">
                 Праздничный банкет
               </div>
               16 часов 30 минут <br />
-              <div class="location--content__title">
-                Белый шатёр
-              </div>
-              Раздольная, 22
+              
             </div>
           </div>
         </v-flex>

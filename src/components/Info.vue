@@ -55,7 +55,7 @@
 <script>
 
 export default {
-  name: 'Tips',
+  name: 'Info',
   data () {
     return {
       colors: [

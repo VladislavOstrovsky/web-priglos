@@ -1,7 +1,7 @@
 <template>
   <v-flex xs12 class="main-logo lovestory">
     <v-img
-      :src="require('../assets/logo.svg')"
+      :src="require('../assets/logo.png')"
       class="my lovestory"
       contain
       height="25vh"
@@ -16,7 +16,7 @@ export default {
   name: 'logo',
   methods: {
     goHome () {
-      window.location.href = `/?q=${this.$route.query.q}`
+      window.location.href = `/?q=${this.$route.query.q || 'guest'}`
     }
   },
 }

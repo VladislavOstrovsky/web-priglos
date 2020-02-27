@@ -1,5 +1,5 @@
 <template>
-  <v-flex mb-12 class="wedding-links">
+  <v-flex class="wedding-links">
     <router-link 
       v-for="link in links"
       :key="link.text"
@@ -20,7 +20,7 @@ export default {
         { url: '/lovestory', text: 'LoveStory' },
         { url: '/photos', text: 'Photos' },
         { url: '/location', text: 'Location' },
-        { url: '/tips', text: 'Tips' },
+        { url: '/info', text: 'Info' },
       ]
     }
   }
@@ -42,8 +42,8 @@ export default {
 
     @media only screen and (max-width: 600px) {
       margin-bottom: 100px;
-      font-size: 30px;
-      margin-left: 10px;
+      font-size: 32px;
+      margin-left: 20px;
     }
 
     @media only screen and (max-width: 320px) {
