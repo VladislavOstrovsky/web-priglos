@@ -97,6 +97,36 @@ export default {
           thumbnail: `${require(`../assets/foto/gallery/preview/gallery_12.jpg`)}`,
           w: 600,
           h: 900,
+        },
+        {
+          src: `${require(`../assets/foto/gallery/gallery_13.jpg`)}`,
+          thumbnail: `${require(`../assets/foto/gallery/preview/gallery_13.jpg`)}`,
+          w: 403,
+          h: 604,
+        },
+        {
+          src: `${require(`../assets/foto/gallery/gallery_14.jpg`)}`,
+          thumbnail: `${require(`../assets/foto/gallery/preview/gallery_14.jpg`)}`,
+          w: 604,
+          h: 430,
+        },
+        {
+          src: `${require(`../assets/foto/gallery/gallery_15.jpg`)}`,
+          thumbnail: `${require(`../assets/foto/gallery/preview/gallery_15.jpg`)}`,
+          w: 900,
+          h: 600,
+        },
+        {
+          src: `${require(`../assets/foto/gallery/gallery_16.jpg`)}`,
+          thumbnail: `${require(`../assets/foto/gallery/preview/gallery_16.jpg`)}`,
+          w: 900,
+          h: 600,
+        },
+        {
+          src: `${require(`../assets/foto/gallery/gallery_17.jpg`)}`,
+          thumbnail: `${require(`../assets/foto/gallery/preview/gallery_17.jpg`)}`,
+          w: 900,
+          h: 600,
         }
       ]
     }

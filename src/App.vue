@@ -250,6 +250,7 @@ h1 {
   margin-bottom: 50px;
   line-height: 1.3;
   letter-spacing: 2px;
+  padding: 0 155px;
 
   @media only screen and (max-width: 1400px) {
     font-size: 70px;
@@ -261,6 +262,7 @@ h1 {
 
   @media only screen and (max-width: 600px) {
     font-size: 36px;
+    padding: 0px;
   }
 
   @media only screen and (max-width: 320px) {
