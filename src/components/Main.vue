@@ -140,7 +140,7 @@ export default {
         { id: 24, key: 9635337744, text: 'Александра!' },
         { id: 25, key: 9132626697, text: 'Алёнушка!' },
         { id: 26, key: 9627939208, text: 'Саша и Алёна!' },
-        { id: 27, key: 9214360955, text: 'Аннечка и Евгений!!' },
+        { id: 27, key: 9214360955, text: 'Аннечка!' },
         { id: 28, key: 9675923752, text: 'Саша!' },
         { id: 29, key: 9069664243, text: 'Антон и Соня!' },
         { id: 30, key: 9237499659, text: 'Иван!' },
@@ -165,8 +165,7 @@ export default {
       return this.$route.query.q || 'guest'
     },
     routeNames () {
-      const filterNames = this.names.filter(x => this.routeNameArray.includes(x.key))
-      return filterNames
+      return this.names.filter(x => this.routeNameArray.includes(x.key))
     }
   },
   methods: {

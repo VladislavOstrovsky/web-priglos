@@ -14,20 +14,8 @@
   src: url('assets/fonts/Amalfi-Coast.ttf');
 }
 @font-face {
-  font-family: ModernSans;
-  src: url('assets/fonts/ModernSans-Light.otf');
-}
-@font-face {
   font-family: BlacktearScript;
   src: url('assets/fonts/BlacktearScript.ttf');
-}
-@font-face {
-  font-family: CorreaScriptRegular;
-  src: url('assets/fonts/CorreaScriptRegular.otf');
-}
-@font-face {
-  font-family: GTWalsheimProRegular;
-  src: url('assets/fonts/GTWalsheimProRegular.ttf');
 }
 
 .v-application {
@@ -148,7 +136,7 @@ h1 {
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 4px 10px 0 rgba(63, 84, 65, .5);
-    
+
     &:hover {
       &.groom {
         &:after {
@@ -271,7 +259,7 @@ h1 {
 }
 
 .v-dialog__container {
-  display: unset; 
+  display: unset;
 }
 
 .v-card__title {
@@ -353,6 +341,17 @@ h1 {
         line-height: 1;
       }
     }
+
+    &__description {
+      font-family: 'Amalfi';
+      font-size: 2.5rem;
+      font-style: italic;
+      font-weight: lighter;
+      line-height: 0.75;
+
+      @media only screen and (max-width: 600px) {
+      }
+    }
   }
 }
 
@@ -365,7 +364,9 @@ h1 {
   }
 
   .v-stepper__step__step {
-    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 2.5rem;
   }
 }
 
@@ -394,10 +395,19 @@ h1 {
   }
 
   &--hashtag {
-    font-size: 4rem;
+    font-size: 2.7rem;
     line-height: 1;
     font-family: 'BlacktearScript';
     text-transform: none;
+
+    @media only screen and (max-width: 320px) {
+      font-size: 2.2rem;
+    }
+
+    &::before {
+      content: '#';
+      font-size: 4rem;
+    }
   }
 
   &--colors {

@@ -8,7 +8,7 @@
 
       <v-flex xs12 mb-4>
         <header-title text="Местоположение" />
-        
+
         <v-flex xs12 mb-10 class="d-inline-flex location animated zoomIn">
           <div class="location--image">
             <v-img
@@ -26,7 +26,7 @@
               cover
             >
             </v-img>
-            
+
             <div v-if="show === 2">
               <div class="location--image__title">
                 Белый шатёр
@@ -51,11 +51,13 @@
                 Сбор гостей
               </div>
               16 часов<br />
+              <div class="location--content__description">
+                В это время будут работать интерактивные зоны, где можно будет поиграть,<br /> пофотографироваться и даже позаниматься рукоделием.
+              </div>
               <div class="location--content__title">
                 Праздничный банкет
               </div>
               16 часов 30 минут <br />
-              
             </div>
           </div>
         </v-flex>
@@ -71,9 +73,9 @@
               >
                 Церемония бракосочетания
               </v-stepper-step>
-      
+
               <v-divider></v-divider>
-      
+
               <v-stepper-step
                 color="teal darken-4"
                 editable
