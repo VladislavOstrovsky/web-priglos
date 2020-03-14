@@ -4,7 +4,7 @@
       :src="require('../assets/logo.png')"
       class="my lovestory"
       contain
-      height="25vh"
+      height="20vh"
       @click="goHome"
     >
     </v-img>
@@ -37,7 +37,7 @@ export default {
   }
 
   @media only screen and (max-width: 600px) {
-    align-self: flex-end;
+
   }
 
   .my {
@@ -46,15 +46,23 @@ export default {
     width: 225px;
     cursor: pointer;
 
-    @media only screen and (max-width: 600px) {
-      width: 130px;
+    @media only screen and (max-width: 1024px) {
+      width: 140px;
     }
 
     &.lovestory {
       margin: 0 0 0 auto;
 
+      @media only screen and (max-width: 1024px) {
+        margin: 150px auto 0;
+      }
+
       @media only screen and (max-width: 600px) {
-        margin: 0 auto;
+        margin: 40px auto;
+      }
+
+      @media only screen and (max-width: 320px) {
+        margin: 20px auto;
       }
     }
 

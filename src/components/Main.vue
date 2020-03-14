@@ -174,7 +174,7 @@ export default {
       window.open(link);
     },
     showMoreInfo (man) {
-      if (window.innerWidth < 600) {
+      if (window.innerWidth < 1025) {
         this.dialog = true
         return man ? this.man = true : this.man = false
       }

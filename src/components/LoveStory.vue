@@ -152,7 +152,7 @@ export default {
 }
 
 .v-timeline {
-  font-family: 'Amalfi';
+  font-family: 'Amalfi', serif;
   margin-bottom: 50px;
 
   .v-timeline-item__opposite {

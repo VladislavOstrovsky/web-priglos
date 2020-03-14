@@ -59,12 +59,12 @@ export default {
   data () {
     return {
       colors: [
-        { id: 1, rgb: '#3e5340', text: 'green', title: 'Зелёный' },
-        { id: 2, rgb: '#879f81', text: 'light-green', title: 'Светло-зелёный' },
-        { id: 3, rgb: '#969696', text: 'gray', title: 'Серый' },
-        { id: 4, rgb: '#d7d5d6', text: 'light-grey', title: 'Светло-серый' },
-        { id: 5, rgb: '#f2e8e6', text: 'soft-peach', title: 'Персиковый' },
-        { id: 6, rgb: '#efd1ca', text: 'almond', title: 'Миндальный' },
+        { id: 1, rgb: 'rgb(62, 83, 64)', text: 'green', title: 'Зелёный' },
+        { id: 2, rgb: 'rgb(135, 159, 129)', text: 'light-green', title: 'Светло-зелёный' },
+        { id: 3, rgb: 'rgb(150, 150, 150)', text: 'gray', title: 'Серый' },
+        { id: 4, rgb: 'rgb(215, 213, 214)', text: 'light-grey', title: 'Светло-серый' },
+        { id: 5, rgb: 'rgb(242, 232, 230)', text: 'soft-peach', title: 'Персиковый' },
+        { id: 6, rgb: 'rgb(239, 209, 202)', text: 'almond', title: 'Миндальный' },
       ]
     }
   },

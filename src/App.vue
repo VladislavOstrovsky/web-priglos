@@ -24,6 +24,10 @@
   &.theme--light {
     background: transparent !important;
 
+    @media only screen and (max-width: 768px) {
+      background: white !important;
+    }
+
     .v-card {
       background-color: #f3eaeb;
     }
@@ -35,8 +39,8 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
 
-  @media only screen and (max-width: 600px) {
-    background: #fff;
+  @media only screen and (max-width: 768px) {
+    background: white;
 
     &:before {
       content: '';
@@ -47,8 +51,15 @@ body {
       height: 159px;
       background: url('assets/bg-main-mobile-top.jpg') no-repeat center;
     }
+  }
+}
+#app {
+  font-family: 'Amalfi', serif;
+  text-align: center;
+  color: #2B2A29;
 
-    &:after {
+  @media only screen and (max-width: 768px) {
+    &:before {
       content: '';
       position: fixed;
       bottom: 0;
@@ -56,14 +67,8 @@ body {
       width: 100%;
       height: 183px;
       background: url('assets/bg-main-mobile-bottom.jpg') no-repeat;
-      z-index: -1;
     }
   }
-}
-#app {
-  font-family: 'Amalfi';
-  text-align: center;
-  color: #2B2A29;
 }
 
 .page-love-story {
@@ -74,7 +79,7 @@ body {
 }
 
 h1 {
-  font-family: 'Amalfi';
+  font-family: 'Amalfi', serif;
   margin-bottom: 50px;
 }
 
@@ -124,7 +129,7 @@ h1 {
 }
 
 .avatar-info {
-  font-family: 'Amalfi';
+  font-family: 'Amalfi', serif;
   font-weight: 500;
   padding: 20px;
   font-size: 45px;
@@ -134,7 +139,7 @@ h1 {
 
   &.desktop {
     border-radius: 10px;
-    background: #fff;
+    background: white;
     box-shadow: 0 4px 10px 0 rgba(63, 84, 65, .5);
 
     &:hover {
@@ -176,7 +181,7 @@ h1 {
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 
@@ -212,7 +217,7 @@ h1 {
 }
 
 .wedding-title {
-  font-family: 'AmalfiCoast';
+  font-family: 'AmalfiCoast', serif;
   font-size: 40px;
 
   @media only screen and (max-width: 600px) {
@@ -233,7 +238,7 @@ h1 {
 }
 
 .wedding-names {
-  font-family: 'BlacktearScript';
+  font-family: 'BlacktearScript', serif;
   font-size: 80px;
   margin-bottom: 50px;
   line-height: 1.3;
@@ -265,7 +270,7 @@ h1 {
 .v-card__title {
   color: #3F5441;
   font-weight: 500;
-  font-family: 'Amalfi';
+  font-family: 'Amalfi', serif;
   font-size: 3rem !important;
 
   @media only screen and (max-width: 600px) {
@@ -303,7 +308,7 @@ h1 {
   }
 
   &--image {
-    font-family: 'BlacktearScript';
+    font-family: 'BlacktearScript', serif;
 
     .v-image__image {
       border-radius: 7px;
@@ -314,7 +319,7 @@ h1 {
     }
 
     &__title {
-      font-family: 'Amalfi';
+      font-family: 'Amalfi', serif;
 
       @media only screen and (max-width: 600px) {
         font-size: 3rem;
@@ -325,7 +330,7 @@ h1 {
 
   &--content {
     margin-left: 80px;
-    font-family: 'BlacktearScript';
+    font-family: 'BlacktearScript', serif;
 
     @media only screen and (max-width: 600px) {
       width: 100vw;
@@ -334,7 +339,7 @@ h1 {
     }
 
     &__title {
-      font-family: 'Amalfi';
+      font-family: 'Amalfi', serif;
 
       @media only screen and (max-width: 600px) {
         font-size: 3rem;
@@ -343,7 +348,7 @@ h1 {
     }
 
     &__description {
-      font-family: 'Amalfi';
+      font-family: 'Amalfi', serif;
       font-size: 2.5rem;
       font-style: italic;
       font-weight: lighter;
@@ -374,7 +379,7 @@ h1 {
   font-size: 4rem;
   line-height: 1;
   font-weight: normal;
-  font-family: 'BlacktearScript';
+  font-family: 'BlacktearScript', serif;
 
   @media only screen and (max-width: 600px) {
     font-size: 3rem;
@@ -382,7 +387,7 @@ h1 {
 }
 
 .tips-content {
-  font-family: 'Book Antiqua';
+  font-family: 'Book Antiqua', serif;
   text-transform: uppercase;
 
   div {
@@ -397,7 +402,7 @@ h1 {
   &--hashtag {
     font-size: 2.7rem;
     line-height: 1;
-    font-family: 'BlacktearScript';
+    font-family: 'BlacktearScript', serif;
     text-transform: none;
 
     @media only screen and (max-width: 320px) {
