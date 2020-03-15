@@ -6,7 +6,7 @@
       class="main"
       style="height: calc(100vh - 60px)"
     >
-      <logo />
+      <logo class="main"/>
 
       <v-flex xs12 mb-4 class="animated zoomIn">
         <h1 class="wedding-title">

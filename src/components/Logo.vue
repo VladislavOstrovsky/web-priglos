@@ -36,8 +36,12 @@ export default {
     align-self: flex-start;
   }
 
-  @media only screen and (max-width: 600px) {
-
+  &.main {
+    .my.lovestory {
+      @media only screen and (max-width: 600px) {
+        margin: 0 auto;
+      }
+    }
   }
 
   .my {
@@ -53,16 +57,12 @@ export default {
     &.lovestory {
       margin: 0 0 0 auto;
 
-      @media only screen and (max-width: 1024px) {
-        margin: 150px auto 0;
+      @media only screen and (max-width: 768px) {
+        margin: 40px auto 0;
       }
 
       @media only screen and (max-width: 600px) {
-        margin: 40px auto;
-      }
-
-      @media only screen and (max-width: 320px) {
-        margin: 20px auto;
+        margin: 40px auto 20px;
       }
     }
 

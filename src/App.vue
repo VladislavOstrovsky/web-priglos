@@ -114,8 +114,8 @@ h1 {
     }
 
     @media only screen and (max-width: 600px) {
-      width: 100px;
-      height: 100px;
+      width: 85px;
+      height: 85px;
     }
   }
 
@@ -136,6 +136,10 @@ h1 {
   line-height: 1;
   text-align: left;
   position: relative;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 35px;
+  }
 
   &.desktop {
     border-radius: 10px;
@@ -221,19 +225,13 @@ h1 {
   font-size: 40px;
 
   @media only screen and (max-width: 600px) {
-    font-size: 28px;
-    margin: 40px 0;
+    font-size: 25px;
+    margin: 0 0 40px;
   }
 
   @media only screen and (max-width: 320px) {
     font-size: 20px;
     margin: 30px 0;
-  }
-
-  &.lovestory {
-    @media only screen and (max-width: 600px) {
-      font-size: 24px;
-    }
   }
 }
 
