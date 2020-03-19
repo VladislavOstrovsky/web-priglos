@@ -424,9 +424,38 @@ h1 {
       border-radius: 100%;
       margin-left: 10px;
 
+      &.main-green {
+        background: url('assets/icons/colors/main-green.svg') center no-repeat;
+      }
+
+      &.lighten-green {
+        background: url('assets/icons/colors/lighten-green.svg') center no-repeat;
+      }
+
+      &.gray {
+        background: url('assets/icons/colors/gray.svg') center no-repeat;
+      }
+
+      &.light-grey {
+        background: url('assets/icons/colors/light-grey.svg') center no-repeat;
+      }
+
+      &.soft-peach {
+        background: url('assets/icons/colors/soft-peach.svg') center no-repeat;
+      }
+
+      &.almond {
+        background: url('assets/icons/colors/almond.svg') center no-repeat;
+      }
+
       @media only screen and (max-width: 600px) {
         width: 45px;
         height: 45px;
+      }
+
+      @media only screen and (max-width: 320px) {
+        width: 39px;
+        height: 39px;
       }
     }
   }

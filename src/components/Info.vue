@@ -39,7 +39,7 @@
               v-for="color in colors"
               :key=color.id
               class="tips-content--colors-item"
-              :style="{ backgroundColor: color.rgb}"
+              :class="color.text"
               :title="color.title">
             </div>
           </div>
@@ -59,12 +59,12 @@ export default {
   data () {
     return {
       colors: [
-        { id: 1, rgb: 'rgb(62, 83, 64)', text: 'green', title: 'Зелёный' },
-        { id: 2, rgb: 'rgb(135, 159, 129)', text: 'light-green', title: 'Светло-зелёный' },
-        { id: 3, rgb: 'rgb(150, 150, 150)', text: 'gray', title: 'Серый' },
-        { id: 4, rgb: 'rgb(215, 213, 214)', text: 'light-grey', title: 'Светло-серый' },
-        { id: 5, rgb: 'rgb(242, 232, 230)', text: 'soft-peach', title: 'Персиковый' },
-        { id: 6, rgb: 'rgb(239, 209, 202)', text: 'almond', title: 'Миндальный' },
+        { id: 1, rgb: '#3E5340', text: 'main-green', title: 'Зелёный' },
+        { id: 2, rgb: '#879F81', text: 'lighten-green', title: 'Светло-зелёный' },
+        { id: 3, rgb: '#969696', text: 'gray', title: 'Серый' },
+        { id: 4, rgb: '#D7D5D6', text: 'light-grey', title: 'Светло-серый' },
+        { id: 5, rgb: '#F2E8E6', text: 'soft-peach', title: 'Персиковый' },
+        { id: 6, rgb: '#EFD1CA', text: 'almond', title: 'Миндальный' },
       ]
     }
   },
